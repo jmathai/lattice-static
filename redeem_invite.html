@@ -123,11 +123,11 @@
             Someone shared an invite code with you. Enter it below to get started.
         </p>
         <div>
-            <div class="d-flex">
+            <div class="d-flex mb-3">
                 <input type="text" name="invite_code" class="form-control me-2" id="inviteCode" placeholder="Invite code" required value="">
-                <button class="btn btn-primary" data-lta-event="redeem-submit">Redeem</button>
+                <button class="btn btn-primary" data-lta-event="redeem-submit" disabled>Redeem</button>
             </div>
-            <small id="emailHelp" class="form-text text-muted">No invite? No problem! <a href="index.html" data-lta-event="redeem-request-invite">Request an invite.</a></small>
+            <small id="emailHelp" class="form-text text-muted"><i class="bi bi-slash-circle"></i> We're not currently redeeming invites.</small>
         </div>
     </form>
 </div>
