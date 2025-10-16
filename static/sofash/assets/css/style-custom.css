@@ -34,6 +34,11 @@
   }
 
   .navbar .logo svg, .navbar .logo .product-name {
+    fill: #ffffff;
+    color: #ffffff;
+  }
+
+  .navbar.stickyadd .logo svg, .navbar.stickyadd .logo .product-name {
     fill: #333333;
     color: #333333;
   }
