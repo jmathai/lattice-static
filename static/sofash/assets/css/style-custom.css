@@ -1,0 +1,134 @@
+@keyframes gradientShift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.navbar .logo svg {
+  height: 40px;
+  margin-top: -5px;
+}
+
+.navbar .logo .logo-light {
+  fill: #fff;
+  color: #fff;
+}
+
+.navbar .logo .logo-dark {
+  fill: #000;
+  color: #000;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .custom-nav {
+    margin-top: 0px;
+    padding: 10px 0px !important;
+    background-color: transparent !important;
+  }
+
+  .navbar .logo svg, .navbar .logo .product-name {
+    fill: #333333;
+    color: #333333;
+  }
+
+  .header_title {
+    font-size: 1.6em;
+  }
+}
+
+.product-name {
+    font-size: 1.25em;
+    letter-spacing: .02em;
+}
+
+.home-bg {
+  padding-top: 100px;
+}
+
+/* Gradient on specific letters */
+.product-name .animated-gradient {
+    /*background: linear-gradient(90deg, #364F6B, #4D638C, #5C3A63, #E5C07B);*/
+    /*background: linear-gradient(90deg, #6D4C91, #B388EB, #7D6599, #D1C4E9);*/
+    background: linear-gradient(90deg, #00796B, #80CBC4, #F48FB1, #FF5252);
+    background-size: 300%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    animation: gradientShift 5s ease-in-out infinite;
+}
+
+.create-gradient-button {
+    /*background: linear-gradient(90deg, #364F6B, #4D638C, #5C3A63, #E5C07B);*/
+    background: linear-gradient(90deg, #6D4C91, #B388EB, #7D6599, #D1C4E9);
+    background-size: 300%;
+    animation: gradientShift 5s ease-in-out infinite;
+
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 14px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, background 0.3s ease;
+}
+
+/* Optional hover effect to darken the gradient */
+.create-gradient-button:hover {
+    background-position: 100% 50%;
+    color: white;
+    text-decoration: none;
+}
+
+
+/* iphone frame and video */
+.phone-container {
+    position: relative;
+    width: 330px;
+    height: 658px;
+    margin: 20px auto; /* Center horizontally and add some margin */
+}
+
+.iphone-frame {
+    width: 100%;
+    height: 100%;
+}
+
+.video-overlay {
+    position: absolute;
+    top: 16px;
+    left: 18px;
+    width: 294px;
+    height: 626px;
+    border-radius: 32px;
+    overflow: hidden;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Make sure video fits within the screen */
+}
+
+.about_icon {
+  color: #eee;
+}
+
+.bottom-logo {
+  margin-bottom: 30px;
+}
+
+.footer_detail a:link, .footer_detail a:visited {
+  color: rgba(255, 255, 255, 0.35);
+  text-decoration: underline !important;
+}
+h1 {
+  font-size: calc(.5rem + 1.5vw);
+}

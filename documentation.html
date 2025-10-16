@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+      <!-- Site Title -->
+      <title>Lattice - Documentation -  Real apps. Built entirely by AI.</title>
+
+      <!-- Site favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="static/images/favicon/apple-touch-icon.png">
+      <link rel="icon" type="image/png" sizes="32x32" href="static/images/favicon/favicon-32x32.png">
+      <link rel="icon" type="image/png" sizes="16x16" href="static/images/favicon/favicon-16x16.png">
+      <meta name="msapplication-TileColor" content="#ffffff">
+      <meta name="theme-color" content="#ffffff">
+
+      <!-- Bootstrap core CSS -->
+      <!--<link rel="stylesheet" href="/static/sofash/assets/css/bootstrap.min.css" type="text/css">-->
+
+      <!-- MFP Css -->
+      <link rel="stylesheet" href="static/sofash/assets/css/magnific-popup.css">
+
+      <!-- Material Icon -->
+      <!--<link rel="stylesheet" type="text/css" href="/static/sofash/assets/css/materialdesignicons.min.css" />-->
+
+      <!-- Pe7 Icon -->
+      <link rel="stylesheet" type="text/css" href="static/sofash/assets/css/pe-icon-7.css">
+
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+      <!-- Custom  Css -->
+      <link rel="stylesheet" type="text/css" href="static/css/bootstrap.min.css" />
+      <link rel="stylesheet" type="text/css" href="static/css/custom.css" />
+      <script src="https://kit.fontawesome.com/9ab9d12273.js" crossorigin="anonymous"></script>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Raleway', sans-serif;
+        }
+
+        .error-container {
+            text-align: center;
+            padding: 40px;
+        }
+        .alert {
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg custom-nav stickyadd">
+            <div class="container">
+                <!-- LOGO -->
+                <a class="logo navbar-brand" href="index.html" data-lta-event="nav-logo">
+                      <div class="icon-text-container d-flex align-items-center">
+                        <i class="fas fa-hashtag me-1"></i>
+                        <span class="product-name">
+                          L<span class="animated-gradient">a</span>tt<span class="animated-gradient">i</span>ce
+                        </span>
+                      </div>
+                    </span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="mdi mdi-menu"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <ul class="navbar-nav mx-auto" id="mySidenav">
+                    
+                      <!--<li class="nav-item">
+                          <a class="nav-link" href="/plans">Plans</a>
+                      </li>-->
+                      <li class="nav-item">
+                          <a class="nav-link" href="documentation.html" data-lta-event="nav-documentation">Documentation</a>
+                      </li>
+                      <li class="nav-item">
+                          <a class="nav-link" href="login.html" data-lta-event="nav-signin">Sign In</a>
+                      </li>
+                    
+                  </ul>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="alert alert-danger d-block d-md-none mt-3 text-center documentation" role="alert">
+              Lattice on mobile devices is a work in progress. Please bear with any bugs or switch to use Lattice on desktop. <i class="bi bi-emoji-smile"></i>
+            </div>
+
+            <!-- Flash Messages -->
+            
+                
+            
+        </div>
+
+
+<style>
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1030;
+    }
+
+    .alert.documentation {
+      margin-top: 80px !important;
+      margin-bottom: -58.5px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 58.5px;
+      bottom: 0;
+      left: 0;
+      width: 250px;
+      overflow-y: auto;
+      padding: 15px;
+    }
+
+    /* Push the main content to the right */
+    .main-content {
+      top: 58.5px;
+      margin-left: 250px;
+      padding: 20px;
+      position: relative;
+      font-size: .9em;
+    }
+    @media (max-width: 992px) {
+      .main-content {
+        margin-left: 0; /* Remove margin when sidebar is collapsed */
+      }
+    }
+    .font-italic {
+      font-style: italic;
+    }
+    h1{ font-size: 1.8em; }
+    h2{ font-size: 1.6em; }
+    h3{ font-size: 1.4em; }
+    h4{ font-size: 1.2em; }
+    h1 .text-muted {
+      font-size: .5em;
+    }
+    .nav-item.section-title a {
+      text-decoration: underline;
+    }
+    .video-container {
+      text-align: center;
+      font-size: .9em;
+      box-shadow: 1px 1px 3px var(--purple-shadow-rgb);
+      font-style: italic;
+    }
+    .video-container video {
+      width: 100%;
+      max-width: 500px;
+      height: auto;
+    }
+</style>
+<div class="container-fluid">
+  <div class="row">
+    <!-- Sidebar -->
+    <nav class="col-md-3 col-lg-2 d-md-block sidebar d-none d-lg-block">
+			    <ul class="section-items list-unstyled nav flex-column pb-3">
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="documentation.html#nav-getting-started" data-lta-event="docs-nav-getting-started"><span class="theme-icon-holder me-2"><i class="bi bi-1-circle"></i></span>Getting Started</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-signing-up" data-lta-event="docs-nav-signing-up">Signing Up</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-feature-overview" data-lta-event="docs-nav-feature-overview">Feature Overview</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-pricing" data-lta-event="docs-nav-pricing">Pricing</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="documentation.html#nav-create-application" data-lta-event="docs-nav-create-application"><span class="theme-icon-holder me-2"><i class="bi bi-2-circle"></i></span>Create</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-describe-idea" data-lta-event="docs-nav-describe-idea">Describe Your Idea</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-iterate-idea" data-lta-event="docs-nav-iterate-idea">Iterate Idea</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-create-application-detail" data-lta-event="docs-nav-create-application-detail">Create Application</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="documentation.html#nav-manage-applications" data-lta-event="docs-nav-manage-applications"><span class="theme-icon-holder me-2"><i class="bi bi-3-circle"></i></span>Manage</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-view-applications" data-lta-event="docs-nav-view-applications">View Applications</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-update-features" data-lta-event="docs-nav-update-features">Add / Update Features</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-fix-bugs" data-lta-event="docs-nav-fix-bugs">Fix Bugs</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-update-design" data-lta-event="docs-nav-update-design">Update Design</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-application-limits" data-lta-event="docs-nav-application-limits">Application Limits</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="documentation.html#nav-advanced-features" data-lta-event="docs-nav-advanced-features"><span class="theme-icon-holder me-2"><i class="bi bi-4-circle"></i></span>Advanced Features</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-data-storage" data-lta-event="docs-nav-data-storage">Data Storage</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="documentation.html#nav-connectors" data-lta-event="docs-nav-connectors">Connectors</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="documentation.html#nav-faqs" data-lta-event="docs-nav-faqs"><span class="theme-icon-holder me-2"><i class="bi bi-5-circle"></i></span>FAQs</a></li>
+				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="documentation.html#nav-support" data-lta-event="docs-nav-support"><span class="theme-icon-holder me-2"><i class="bi bi-6-circle"></i></span>Support</a></li>
+			    </ul>
+    </nav>
+        <!-- Main Content -->
+    <main class="col-md-9 ms-sm-auto col-lg-10 px-md-5 main-content mb-5">
+      <article class="docs-article" id="section-1">
+        <header class="docs-header">
+          <h1 class="docs-heading">Welcome to Lattice<div class="text-muted">Real apps. Built entirely by AI.</div></h1>
+          <section class="docs-intro">
+            <p>We're thrilled to have you using Lattice. We want to enable everyone to turn their software ideas into reality.</p>
+            <p>Lattice has a sweet spot which offers more flexibility than traditional no-code platforms while requiring less technical expertise than low code platforms. We believe that Lattice becomes a tool more people can use by hiding <em>all</em> of the technical details. So you're not going to see source code or database connections. Instead, Lattice uses a purely human language interface to do the extra work in the background, making it easy for everyone. Whether you’re an entrepreneur, small business owner, or anyone with an idea but no technical team, Lattice enables you to turn your ideas into reality quickly and affordably.<p>
+          </section><!--//docs-intro-->
+        
+        </header>
+        <section class="docs-section">
+          <h2 class="section-heading" id="nav-what-to-expect">What To Expect</h2>
+          <p>Products like Lattice are new so it's great to get an idea of what you can expect. You'll be looking at a functional application right away. We find that most people can customize their application to suit their in under an hour.</p>
+          <table class="table">
+            <tbody>
+              <tr>
+                <td>0-1 minute</td>
+                <td>In the first minute, you'll have entered your idea and Lattice will show you a structured description of the application.</td>
+              </tr>
+              <tr>
+                <td>1-10 minutes</td>
+                <td>The first version of your application will be ready to use.</td>
+              </tr>
+              <tr>
+                <td>10-60 minutes</td>
+                <td>You will iterate your application with Lattice's help by adding features and squashing any pesky bugs you find.</td>
+              </tr>
+              <tr>
+                <td>60+ minutes</td>
+                <td>You will be inspired by how easy it is to build your application that new ideas and features will start flowing. This is where it gets really fun.</td>
+              </tr>
+            </tbody>
+          </table>
+          <h3 id="nav-strengths">Where Lattice Excels</h3>
+          <p>Lattice does a better job at some tasks than others. Here are some types of apps Lattice does well at.</p>
+          <ul>
+            <li>Multi-user sites: simple discussion forums, time tracking, micro blogging or recipe sharing websites.</li>
+            <li>Spreadsheet applications: lead generation, data analysis such as creating a single view across multiple sheets. These utilize the <a href="documentation.html#nav-connectors" data-lta-event="docs-connectors">Google Sheets connector</a>.</li>
+            <li>Generative Q&amp;A: dynamic FAQs and knowledge base websites. These require the <a href="documentation.html#nav-connectors" data-lta-event="docs-connectors">OpenAI connector</a> which you can optionally provide data to using the <a href="documentation.html#nav-connectors" data-lta-event="docs-connectors">Google Sheets connector</a>.</li>
+          </ul>
+          <p>There are some things Lattice can't do yet.</p>
+          <ul>
+            <li>Access external content including URLs. Look at <a href="documentation.html#nav-connectors" data-lta-event="docs-connectors">connectors</a> if you need to access external content.</li>
+            <li>Image generation for logos or marketing content.</li>
+          </ul>
+          <h2 class="section-heading" id="nav-getting-started">Getting Started</h2>
+          <p>Getting started only requires an invite code and an idea.</p>
+          <p>Most of your time will be spent in the chat interface collaborating with Lattice on creating and modifying your idea.</p>
+          <p>The quality of your application increases with the effort you put in working with Lattice.</p>
+          <h3 id="nav-signing-up">Signing Up</h3>
+          <ul>
+            <li>Request an invite</li>
+            <li>Redeem invite and sign up</li>
+          </ul>
+
+          <h3 id="nav-feature-overview">Feature Overview</h3>
+          <p>Lattice is, by design, very simple. We started with the goal of hiding the complexity involved in creating an application and you'll notice this in the simplicity of the site.</p>
+          <ul>
+            <li>Create an app</li>
+            <li>
+              My applications
+              <ul>
+                <li>Change application</li>
+                <li>Design application</li>
+                <li>Delete application</li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3 id="nav-pricing">Pricing</h3>
+          <p>Pricing is currently being evaluated, and feedback is welcome. There will be a limited free tier, and other tiers starting at around $20/month (we think). These plans include application creation and hosting, with advanced features available in higher-priced tiers.</p>
+
+          <h2 class="section-heading" id="nav-create-application">Creating an Application</h2>
+          <div class="video-container d-inline-block mb-3">
+            <video crossorigin="anonymous" controls playsinline placeholder="/static/images/documentation/lattice-how-to-create-an-application.jpg">
+              <source src="https://lattice-prod.s3.us-east-1.amazonaws.com/upload/site/lattice-how-to-create-an-application.mp4">
+            </video>
+            <div class="text-muted">A video showing how to create an application.</div>
+          </div>
+
+          <h3 id="nav-describe-idea">Step 1: Describe Your Idea</h3>
+          <div class="alert alert-light" role="alert">
+            <i class="bi bi-lightbulb"></i> Have your idea already written down? Copy and paste it in.
+          </div>
+          <ol>
+            <li>Click <em>Create an App</em> on the navigation.</li>
+            <li>Provide a detailed description of your application in plain language. For example:
+              <ul class="font-italic">
+                <li>I need a task management app that tracks deadlines and sends reminders.</li>
+                <li>Create a discussion forum for my San Francisco 49ers fan group.</li>
+              </ul>
+            </li>
+          </ol>
+
+          <h3 id="nav-iterate-idea">Step 2: Collaborate and Iterate With Lattice</h3>
+          <div class="alert alert-light" role="alert">
+            <i class="bi bi-info-circle"></i> Perfect is the enemy of good. Give Lattice what you have and work together towards something great.
+          </div>
+          <ul>
+            <li>Lattice’s AI will propose a structure for your application based on your description.</li>
+            <li>You can interact with the AI via chat to remove, add, or modify features.</li>
+            <li>Refine the application until it meets your requirements.</li>
+            <li>You can provide visual instructions like font or background colors.</li>
+          </ul>
+
+          <h3 id="nav-create-application-detail">Step 3: Create Your Application</h3>
+          <ul>
+            <li>Once satisfied, click <em>Create Application</em>.</li>
+            <li>Lattice generates your fully functional application in minutes.</li>
+            <li>Once created, you can view the application. So can others.</li>
+          </ul>
+          <div class="alert alert-light" role="alert">
+            <i class="bi bi-clock"></i> We're working on having a staging environment for your changes where you can review them before publishing them to the world.
+          </div>
+
+          <h2 class="section-heading" id="nav-manage-applications">Managing Your Applications</h2>
+          <h3 id="nav-view-applications">Viewing Applications</h3>
+          <ul>
+            <li>Clicking <em>My Applications</em> in the navigation will take you to a list of all your applications.</li>
+          </ul>
+
+          <h3 id="nav-update-features">Adding / Updating Features</h3>
+          <div class="video-container d-inline-block mb-3">
+            <video width="500" crossorigin="anonymous" controls playsinline placeholder="/static/images/documentation/lattice-how-to-add-feature.jpg">
+              <source src="https://lattice-prod.s3.us-east-1.amazonaws.com/upload/site/lattice-how-to-add-feature.mp4">
+            </video>
+            <div class="text-muted">A video showing how to update the behavior of an application.</div>
+          </div>
+
+          <ol>
+            <li>Select an application to open its details.</li>
+            <li>
+              Use the Change Application feature to describe updates, such as adding new features or modifying existing ones.
+              <ul>
+                <li>
+                  This is the same interface used to create an application. Describe the change you would like to make. For example:
+                  <ul class="font-italic">
+                    <li>Add the ability for users to leave comments on a post.</li>
+                    <li>Automatically sign users in after they register and redirect them to the home page.</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li>Once happy with the change summary shown, click <em>Change Application</em>.</li>
+            <li>Changes take about the same time as creating the application. Usually a little less but about the same.</li>
+          </ol>
+
+          <h3 id="nav-fix-bugs">Handling Bug Fixes</h3>
+          <div class="video-container d-inline-block mb-3">
+            <video width="500" crossorigin="anonymous" controls playsinline placeholder="/static/images/documentation/lattice-how-to-fix-bugs.jpg">
+              <source src="https://lattice-prod.s3.us-east-1.amazonaws.com/upload/site/lattice-how-to-fix-bugs.mp4">
+            </video>
+            <div class="text-muted">A video showing how to fix bugs in an application.</div>
+          </div>
+          <ul>
+            <li>Use the Change Application feature to fix bugs. Lattice keeps track of errors from the past 15 minutes. If you request a fix within that window, the AI has a high success rate of resolving the issue. The following format works well for fixing bugs.
+              <ul class="font-italic">
+                <li>Fix the following errors:
+                    <ol>
+                      <li>Signing in after registering gives me an error "could not find database"</li>
+                      <li>The sign in button requires that I click it twice to sign in</li>
+                    </ol>
+                </li>
+              </ul>
+            </li>
+            <li>Applications have a version history. In the near future, you will be able to revert to a prior version of the application.</li>
+          </ul>
+
+          <h3 id="nav-update-design">Designing Applications</h3>
+          <div class="video-container d-inline-block mb-3">
+            <video width="500" crossorigin="anonymous" controls playsinline placeholder="/static/images/documentation/lattice-how-to-design-application.jpg">
+              <source src="https://lattice-prod.s3.us-east-1.amazonaws.com/upload/site/lattice-how-to-design-application.mp4">
+            </video>
+            <div class="text-muted">A video showing how to customize the look and feel of an application.</div>
+          </div>
+          <ul>
+            <li>Use the <em>Design Application</em> feature to choose from various themes. Customize themes further by selecting colors for different elements.</li>
+            <li>Alternatively, use the <em>Change Application</em> feature to request visual changes. For example:
+              <ul class="font-italic">
+                <li><em>Replace the like button with a heart icon</em></li>
+                <li><em>Add an animated gradient with purple, blue and green to the title in the header</em></li>
+              </ul>
+            </li>
+          </ul>
+
+          <h3 id="nav-application-limits">Application Limits</h3>
+          <ul>
+            <li>Currently, there is no limit to the number of applications you can create. However, expect to see limits (and new features) once we introduce pricing plans.</li>
+          </ul>
+
+          <h2 class="section-heading" id="nav-advanced-features">Advanced Features</h2>
+          <h3 id="nav-data-storage">Data Storage</h3>
+          <p>Lattice enables you to easily add data storage capabilities to your applications, whether you need to store structured text or manage user-uploaded files. These capabilities are extracted from your application description and Lattice handles the rest.</p>
+          <p>By combining database and file storage capabilities, Lattice empowers you to create feature-rich applications that cater to a wide range of use cases, all without the need for manual configuration or complex backend systems.</p>
+          <p>This section explains the two types of data storage supported by Lattice: databases and files, along with examples of how they can be utilized in your applications.</p>
+          
+          <h4 id="nav-data-storage-databases">Databases</h4>
+          <div class="alert alert-light" role="alert">
+            <i class="bi bi-lightbulb"></i> Use a database to easily manage content in your application. For example, have a <em>Manage Categories</em> section of your application to populate categories in a dropdown list.
+          </div>
+          <p>Databases are a powerful way to store structured data that can be displayed back to users within your application. Lattice makes it simple to store and retrieve information that users create or interact with in your application. These are some example use cases for storing information in a database.<p>
+          <ul>
+            <li><strong>Discussion Forum:</strong> Users can post messages or comments, and the system can display the discussion threads dynamically.</li>
+            <li><strong>Task List:</strong> Users can add, update, or delete tasks, and view the list of tasks stored in the database.</li>
+          </ul>
+
+          <h4 id="nav-data-storage-files">Files</h4>
+          <div class="alert alert-light" role="alert">
+            <i class="bi bi-lightbulb"></i> Let users upload photos and have Lattice handle resizing them and displaying them in your application.
+          </div>
+          <p>For applications that require file management, Lattice allows you to handle user-uploaded files effortlessly. This functionality is ideal for scenarios where users need to upload, display, or download files. These are some example use cases for storing files.</p>
+          <ul>
+            <li><strong>Common Use Cases:</strong> Image Handling: Accept images from users and display them directly in the application (e.g., profile pictures or product images).</li>
+            <li><strong>File Downloads:</strong> Allow users to download files such as reports, documents, or other resources.</li>
+          </ul>
+
+          <h3 id="nav-connectors">Connectors</h3>
+          <div class="alert alert-light" role="alert">
+            <i class="bi bi-hammer"></i> Connectors are currently experimental. Your feedback helps us improve it to meet your needs.
+          </div>
+          <p>Connectors let you access services and data in third party systems. We currently support the following connectors.</p>
+          <ul>
+            <li>Google Sheets</li>
+            <li>OpenAI (ChatGPT)</li>
+          </ul>
+
+          <h4>Google Sheets</h4>
+          <p>You can grant Lattice view or edit access to your Google Sheet depending on the needs of your application. This is a more granular way to grant access to a single sheet instead of your entire Google Drive. Granting access is done by sharing the sheet with a Lattice managed service account using the standard sharing feature in Google Sheets. To revoke access, simply unshare the Google Sheet with the Lattice managed service account from the Google Sheets sharing dialog.</p>
+
+          <h4>OpenAI (ChatGPT)</h4>
+          <p>You can add generative AI capabilities to your application by providing an OpenAI API key. It's strongly recommended that you generate a key specifically for Lattice and possibly for each app depending on your use case. In order to revoke access, you'll need to deactivate the API key. We plan on adding the ability to manage existing keys from Lattice in the future.<p>    
+
+          <h2 class="section-heading" id="nav-faqs">Frequently Asked Questions</h2>
+          <ol class="faq">
+            <li>
+              <em>Question:</em> How complex can my application be?
+              <p>Users have built moderatly complex apps within 30 minutes to several hours. While there's a complexity limit, better prompts lead to better results.</p>
+            </li>
+            <li>
+              <em>Question:</em> How do I download data generated by my app?
+              <p>We are currently working on a way to download all of the data generated by your app.</p>
+            </li>
+            <li>
+              <em>Question:</em> Where is my application hosted?
+              <p>Lattice manages the hosting of your application and currently uses Google Cloud though this may change in the future.</p>
+            </li>
+            <li>
+              <em>Question:</em> Can I host my application myself?
+              <p>We are currently working on the ability to host your application elsewhere. Lattice containerizes each application which will make it easy for you to host it anywhere you'd like.</p>
+            </li>
+            <li>
+              <em>Question:</em> Can I access the source code for my application?
+              <p>We are planning to let you download the source code. We do not have plans at the moment to let you modify source code while it is hosted by Lattice though that may change in the future.</p>
+            </li>
+          </ol> 
+
+          <h2 class="section-heading" id="nav-support">Support and Feedback</h2>
+          <strong>Need Help?</strong>
+          <ul>
+            <li>Support responds quickly. Email us at <a href="mailto:hello@withlattice.com" data-lta-event="docs-email">hello@withlattice.com</a>.</li>
+            <li>A community chat for real-time support from the Lattice team and other Lattice users is being planned.</li>
+          </ul>
+          <strong>Feedback</strong>
+          <ul>
+            <li>We plan to add a feature request area on the site with the ability to vote on feature suggestions. Until then, <a href="mailto:hello@withlattice.com" data-lta-event="docs-email">email us</a> <i class="bi bi-emoji-smile"></i>.</li>
+          </ul>
+          <strong>Troubleshooting</strong>
+          <ul>
+            <li>If an application gets "stuck" or the AI struggles to fix an issue, try asking it to resolve the error up to three times. If the issue persists, reach out to us for assistance.</li>
+          </ul>
+        </section><!--//section-->
+      
+      </article>
+    </main>
+  </div>
+</div>
+
+
+
+        <style type="text/css">
+          /*
+           * Footer
+           */
+          /* used on home page where custom.css is not included */
+          /* Gradient on specific letters */
+          .footer {
+            margin-top: 20px;
+            border-top: solid 1px #efefef;
+          }
+          .footer .magic-icon-gradient {
+              background: linear-gradient(90deg, #576F92, #8B5C83, #E7A563, #586D46);
+              background-size: 300%;
+              background-clip: text;
+              -webkit-background-clip: text;
+              color: transparent;
+              animation: gradientShift 5s ease-in-out infinite;
+              padding-left: 2px;
+              padding-right: 2px;
+          }
+        </style>
+        <footer class="footer pt-5 mb-3">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="text-center">
+                            <div class="footer_detail">
+                                <p class="footer_desc mx-auto mb-0 mt-3">Created by mixing <i class="fas fa-hashtag magic-icon-gradient"></i> and <i class="fas fa-wand-magic-sparkles magic-icon-gradient"></i>.</p>
+                                <p class="footer_desc mx-auto mb-0 mt-3">We're product engineers who wanted a faster way to bring our ideas to life.</p>
+                                <p class="footer_desc mx-auto mb-0 mt-3">So we created Lattice. We hope it helps you do the same.</p>
+                                <p class="footer_desc mx-auto mb-0 mt-3"><a href="documentation.html" data-lta-event="footer-documentation">Documentation</a> | <a href="mailto:hello@withlattice.com" data-lta-event="footer-email">hello@withlattice.com</a></p>
+                                <div class="fot_div"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer -->
+
+        <!-- Back To Top -->    
+        <a href="documentation.html#" class="back_top"> <i class="mdi mdi-chevron-up"> </i> </a>
+
+        <!-- Javascript -->
+        <script src="static/sofash/assets/js/jquery.min.js"></script>
+        <script src="static/sofash/assets/js/popper.min.js"></script>
+        <script src="static/sofash/assets/js/bootstrap.bundle.min.js"></script>
+        <script src="static/sofash/assets/js/jquery.easing.min.js"></script>
+        <script src="static/sofash/assets/js/scrollspy.min.js"></script>
+        
+        <!-- MFP JS -->
+        <script src="static/sofash/assets/js/jquery.magnific-popup.min.js"></script>
+
+        <!-- CONTACT JS -->
+        <script src="static/sofash/assets/js/contact.js"></script>
+        
+        <!-- Include marked.js for Markdown parsing -->
+        <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+        <!-- Custom Js   -->
+        <script src="static/sofash/assets/js/custom.js"></script>  
+        
+
+    </body>
+</html>
